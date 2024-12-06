@@ -1,6 +1,4 @@
-# MCP servers ![NPM Version](https://img.shields.io/npm/v/%40modelcontextprotocol%2Fexample-servers)
-
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# MCP servers
 
 A collection of reference implementations and community-contributed servers for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). This repository showcases the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.
 
@@ -15,6 +13,7 @@ A collection of reference implementations and community-contributed servers for 
 - **[Puppeteer](src/puppeteer)** - Browser automation and web scraping
 - **[Brave Search](src/brave-search)** - Web and local search using Brave's Search API
 - **[Google Maps](src/google-maps)** - Location services, directions, and place details
+- **[Fetch](src/fetch)** - Web content fetching and conversion for efficient LLM usage
 
 ## 🚀 Getting Started
 
