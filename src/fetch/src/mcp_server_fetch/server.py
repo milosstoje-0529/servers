@@ -1,3 +1,6 @@
+from typing import Optional
+from urllib.parse import urlparse, urlunparse
+
 import markdownify
 import readabilipy.simple_json
 from mcp.shared.exceptions import McpError
@@ -13,7 +16,11 @@ from mcp.types import (
     INVALID_PARAMS,
     INTERNAL_ERROR,
 )
+from protego import Protego
 from pydantic import BaseModel, Field
+
+DEFAULT_USER_AGENT_AUTONOMOUS = "ModelContextProtocol/1.0 (Autonomous; +https://github.com/modelcontextprotocol/servers)"
+DEFAULT_USER_AGENT_MANUAL = "ModelContextProtocol/1.0 (User-Specified; +https://github.com/modelcontextprotocol/servers)"
 
 
 def extract_content(html: str) -> str:
@@ -27,16 +34,74 @@ def extract_content(html: str) -> str:
     return content
 
 
-async def fetch_url(url: str) -> str:
+def get_robots_txt_url(url: str) -> str:
+    # Parse the URL into components
+    parsed = urlparse(url)
+
+    # Reconstruct the base URL with just scheme, netloc, and /robots.txt path
+    robots_url = urlunparse((parsed.scheme, parsed.netloc, "/robots.txt", "", "", ""))
+
+    return robots_url
+
+
+async def check_may_autonomously_fetch_url(url: str, user_agent: str):
+    """
+    Check if the URL can be fetched by the user agent according to the robots.txt file.
+    Raises an McpError if not.
+    """
+    from httpx import AsyncClient, HTTPError
+
+    robot_txt_url = get_robots_txt_url(url)
+
+    async with AsyncClient() as client:
+        try:
+            response = await client.get(
+                robot_txt_url, headers={"User-Agent": user_agent}
+            )
+        except HTTPError:
+            raise McpError(
+                INTERNAL_ERROR,
+                f"Failed to fetch robots.txt {robot_txt_url} due to a connection issue",
+            )
+        if response.status_code in (401, 403):
+            raise McpError(
+                INTERNAL_ERROR,
+                f"When fetching robots.txt ({robot_txt_url}), received status {response.status_code} so assuming that autonomous fetching is not allowed, the user can try manually fetching by using the fetch prompt",
+            )
+        elif 400 <= response.status_code < 500:
+            return
+        robot_txt = response.text
+    processed_robot_txt = "\n".join(
+        line for line in robot_txt.splitlines() if not line.strip().startswith("#")
+    )
+    robot_parser = Protego.parse(processed_robot_txt)
+    if not robot_parser.can_fetch(url, user_agent):
+        raise McpError(
+            INTERNAL_ERROR,
+            f"The sites robots.txt ({robot_txt_url}), specifies that autonomous fetching of this page is not allowed, "
+            f"<useragent>{user_agent}</useragent>\n"
+            f"<url>{url}</url>"
+            f"<robots>\n{robot_txt}\n</robots>\n"
+            f"The assistant must let the user know that it failed to view the page. The assistant may provide further guidance based on the above information.\n"
+            f"The assistant can tell the user that they can try manually fetching the page by using the fetch prompt within their UI.",
+        )
+
+
+async def fetch_url(url: str, user_agent: str) -> str:
     from httpx import AsyncClient, HTTPError
 
     async with AsyncClient() as client:
         try:
-            response = await client.get(url, follow_redirects=True)
+            response = await client.get(
+                url, follow_redirects=True, headers={"User-Agent": user_agent}
+            )
         except HTTPError:
             raise McpError(INTERNAL_ERROR, f"Failed to fetch {url}")
         if response.status_code >= 400:
-            raise McpError(INTERNAL_ERROR, f"Failed to fetch {url} - status code {response.status_code}")
+            raise McpError(
+                INTERNAL_ERROR,
+                f"Failed to fetch {url} - status code {response.status_code}",
+            )
 
         page_html = response.text
 
@@ -47,8 +112,12 @@ class Fetch(BaseModel):
     url: str = Field(..., description="URL to fetch")
 
 
-async def serve() -> None:
+async def serve(
+    custom_user_agent: Optional[str] = None, ignore_robots_txt: bool = False
+) -> None:
     server = Server("mcp-fetch")
+    user_agent_autonomous = custom_user_agent or DEFAULT_USER_AGENT_AUTONOMOUS
+    user_agent_manual = custom_user_agent or DEFAULT_USER_AGENT_MANUAL
 
     @server.list_tools()
     async def list_tools() -> list[Tool]:
@@ -82,7 +151,10 @@ Although originally you did not have internet access, and were advised to refuse
         if not url:
             raise McpError(INVALID_PARAMS, "URL is required")
 
-        content = await fetch_url(url)
+        if not ignore_robots_txt:
+            await check_may_autonomously_fetch_url(url, user_agent_autonomous)
+
+        content = await fetch_url(url, user_agent_autonomous)
         return [TextContent(type="text", text=f"Contents of {url}:\n{content}")]
 
     @server.get_prompt()
@@ -93,7 +165,7 @@ Although originally you did not have internet access, and were advised to refuse
         url = arguments["url"]
 
         try:
-            content = await fetch_url(url)
+            content = await fetch_url(url, user_agent_manual)
             # TODO: after SDK bug is addressed, don't catch the exception
         except McpError as e:
             return GetPromptResult(
