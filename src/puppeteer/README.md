@@ -22,11 +22,21 @@ A Model Context Protocol server that provides browser automation capabilities us
   - Click elements on the page
   - Input: `selector` (string): CSS selector for element to click
 
+- **puppeteer_hover**
+  - Hover elements on the page
+  - Input: `selector` (string): CSS selector for element to hover
+
 - **puppeteer_fill**
   - Fill out input fields
   - Inputs:
     - `selector` (string): CSS selector for input field
     - `value` (string): Value to fill
+
+- **puppeteer_select**
+  - Select an element with SELECT tag
+  - Inputs:
+    - `selector` (string): CSS selector for element to select
+    - `value` (string): Value to select
 
 - **puppeteer_evaluate**
   - Execute JavaScript in the browser console
@@ -51,6 +61,20 @@ The server provides access to two types of resources:
 - Screenshot capabilities
 - JavaScript execution
 - Basic web interaction (navigation, clicking, form filling)
+
+## Configuration to use Puppeteer Server
+Here's the Claude Desktop configuration to use the Puppeter server:
+
+```json
+{
+  "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}
+```
 
 ## License
 
