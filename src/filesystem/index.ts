@@ -13,6 +13,7 @@ import os from 'os';
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { diffLines, createTwoFilesPatch } from 'diff';
+import { minimatch } from 'minimatch';
 
 // Command line argument parsing
 const args = process.argv.slice(2);
@@ -134,6 +135,7 @@ const MoveFileArgsSchema = z.object({
 const SearchFilesArgsSchema = z.object({
   path: z.string(),
   pattern: z.string(),
+  excludePatterns: z.array(z.string()).optional().default([])
 });
 
 const GetFileInfoArgsSchema = z.object({
@@ -161,7 +163,17 @@ const server = new Server(
   },
   {
     capabilities: {
-      tools: {},
+      listChanged: false,
+      tools: {
+        search_files: {
+          description: "Recursively search for files/directories with optional exclude patterns",
+          inputSchema: zodToJsonSchema(SearchFilesArgsSchema),
+          handler: async (args: z.infer<typeof SearchFilesArgsSchema>) => {
+            const validatedPath = await validatePath(args.path);
+            return searchFiles(validatedPath, args.pattern, args.excludePatterns);
+          },
+        },
+      },
     },
   },
 );
@@ -183,6 +195,7 @@ async function getFileStats(filePath: string): Promise<FileInfo> {
 async function searchFiles(
   rootPath: string,
   pattern: string,
+  excludePatterns: string[] = []
 ): Promise<string[]> {
   const results: string[] = [];
 
@@ -191,10 +204,21 @@ async function searchFiles(
 
     for (const entry of entries) {
       const fullPath = path.join(currentPath, entry.name);
-      
+
       try {
         // Validate each path before processing
         await validatePath(fullPath);
+
+        // Check if path matches any exclude pattern
+        const relativePath = path.relative(rootPath, fullPath);
+        const shouldExclude = excludePatterns.some(pattern => {
+          const globPattern = pattern.startsWith('*') ? pattern : `*/${pattern}/*`;
+          return minimatch(relativePath, globPattern, { dot: true });
+        });
+
+        if (shouldExclude) {
+          continue;
+        }
 
         if (entry.name.toLowerCase().includes(pattern.toLowerCase())) {
           results.push(fullPath);
@@ -418,6 +442,18 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const { name, arguments: args } = request.params;
 
     switch (name) {
+      case "search_files": {
+        const parsed = SearchFilesArgsSchema.safeParse(args);
+        if (!parsed.success) {
+          throw new Error(`Invalid arguments for search_files: ${parsed.error}`);
+        }
+        const validPath = await validatePath(parsed.data.path);
+        const results = await searchFiles(validPath, parsed.data.pattern, parsed.data.excludePatterns);
+        return {
+          content: [{ type: "text", text: results.length > 0 ? results.join("\n") : "No matches found" }],
+        };
+      }
+
       case "read_file": {
         const parsed = ReadFileArgsSchema.safeParse(args);
         if (!parsed.success) {
@@ -516,18 +552,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         };
       }
 
-      case "search_files": {
-        const parsed = SearchFilesArgsSchema.safeParse(args);
-        if (!parsed.success) {
-          throw new Error(`Invalid arguments for search_files: ${parsed.error}`);
-        }
-        const validPath = await validatePath(parsed.data.path);
-        const results = await searchFiles(validPath, parsed.data.pattern);
-        return {
-          content: [{ type: "text", text: results.length > 0 ? results.join("\n") : "No matches found" }],
-        };
-      }
-
       case "get_file_info": {
         const parsed = GetFileInfoArgsSchema.safeParse(args);
         if (!parsed.success) {
@@ -544,9 +568,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       case "list_allowed_directories": {
         return {
-          content: [{ 
-            type: "text", 
-            text: `Allowed directories:\n${allowedDirectories.join('\n')}` 
+          content: [{
+            type: "text",
+            text: `Allowed directories:\n${allowedDirectories.join('\n')}`
           }],
         };
       }
