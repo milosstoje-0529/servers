@@ -10,7 +10,7 @@ Each MCP server is implemented with either the [Typescript MCP SDK](https://gith
 
 These servers aim to demonstrate MCP features and the Typescript and Python SDK.
 
-- **[AWS KB Retrieval](src/aws-kb-retrieval-server)** - Retrieval from AWS Knowledge Base using Bedrock Agent Runtime
+- **[AWS KB Retrieval](src/aws-kb-retrieval)** - Retrieval from AWS Knowledge Base using Bedrock Agent Runtime
 - **[Brave Search](src/brave-search)** - Web and local search using Brave's Search API
 - **[EverArt](src/everart)** - AI image generation using various models
 - **[Fetch](src/fetch)** - Web content fetching and conversion for efficient LLM usage
@@ -76,7 +76,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[Pandoc](https://github.com/vivekVells/mcp-pandoc)** - MCP server for seamless document format conversion using Pandoc, supporting Markdown, HTML, and plain text, with other formats like PDF, csv and docx in development. 
 - **[HuggingFace Spaces](https://github.com/evalstate/mcp-hfspace)** - Server for using HuggingFace Spaces, supporting Open Source Image, Audio, Text Models and more. Claude Desktop mode for easy integration.
 - **[ChatSum](https://github.com/mcpso/mcp-server-chatsum)** - Query and Summarize chat messages with LLM. by [mcpso](https://mcp.so)
-- **[Rememberizer AI](https://github.com/skydeckai/mcp-server-rememberizer)** - An MCP server designed for interacting with the Rememberizer data source, facilitating enhanced knowledge retrieval.
+- **[XMind](https://github.com/apeyroux/mcp-xmind)** - Read and search through your XMind directory containing XMind files.
 
 ## 📚 Resources
 
