@@ -117,8 +117,6 @@ Add the following to your `claude_desktop_config.json`:
       "command": "docker",
       "args": [
         "run",
-        "--rm",
-        "-i",
         "-e",
         "GITLAB_PERSONAL_ACCESS_TOKEN",
         "-e",
