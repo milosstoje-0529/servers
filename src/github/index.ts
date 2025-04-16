@@ -25,12 +25,11 @@ import {
   GitHubConflictError,
   isGitHubError,
 } from './common/errors.js';
-import { VERSION } from "./common/version.js";
 
 const server = new Server(
   {
     name: "github-mcp-server",
-    version: VERSION,
+    version: "0.1.0",
   },
   {
     capabilities: {
@@ -290,27 +289,21 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const args = issues.ListIssuesOptionsSchema.parse(request.params.arguments);
         const { owner, repo, ...options } = args;
         const result = await issues.listIssues(owner, repo, options);
-        return {
-          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
-        };
+        return { toolResult: result };
       }
 
       case "update_issue": {
         const args = issues.UpdateIssueOptionsSchema.parse(request.params.arguments);
         const { owner, repo, issue_number, ...options } = args;
         const result = await issues.updateIssue(owner, repo, issue_number, options);
-        return {
-          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
-        };
+        return { toolResult: result };
       }
 
       case "add_issue_comment": {
         const args = issues.IssueCommentSchema.parse(request.params.arguments);
         const { owner, repo, issue_number, body } = args;
         const result = await issues.addIssueComment(owner, repo, issue_number, body);
-        return {
-          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
-        };
+        return { toolResult: result };
       }
 
       case "list_commits": {
@@ -330,9 +323,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case "get_issue": {
         const args = issues.GetIssueSchema.parse(request.params.arguments);
         const issue = await issues.getIssue(args.owner, args.repo, args.issue_number);
-        return {
-          content: [{ type: "text", text: JSON.stringify(issue, null, 2) }],
-        };
+        return { toolResult: issue };
       }
 
       default:
