@@ -102,16 +102,16 @@ def git_log(repo: git.Repo, max_count: int = 10) -> list[str]:
     log = []
     for commit in commits:
         log.append(
-            f"Commit: {commit.hexsha!r}\n"
-            f"Author: {commit.author!r}\n"
+            f"Commit: {commit.hexsha}\n"
+            f"Author: {commit.author}\n"
             f"Date: {commit.authored_datetime}\n"
-            f"Message: {commit.message!r}\n"
+            f"Message: {commit.message}\n"
         )
     return log
 
 def git_create_branch(repo: git.Repo, branch_name: str, base_branch: str | None = None) -> str:
     if base_branch:
-        base = repo.references[base_branch]
+        base = repo.refs[base_branch]
     else:
         base = repo.active_branch
 
@@ -132,10 +132,10 @@ def git_init(repo_path: str) -> str:
 def git_show(repo: git.Repo, revision: str) -> str:
     commit = repo.commit(revision)
     output = [
-        f"Commit: {commit.hexsha!r}\n"
-        f"Author: {commit.author!r}\n"
-        f"Date: {commit.authored_datetime!r}\n"
-        f"Message: {commit.message!r}\n"
+        f"Commit: {commit.hexsha}\n"
+        f"Author: {commit.author}\n"
+        f"Date: {commit.authored_datetime}\n"
+        f"Message: {commit.message}\n"
     ]
     if commit.parents:
         parent = commit.parents[0]
@@ -166,62 +166,62 @@ async def serve(repository: Path | None) -> None:
             Tool(
                 name=GitTools.STATUS,
                 description="Shows the working tree status",
-                inputSchema=GitStatus.model_json_schema(),
+                inputSchema=GitStatus.schema(),
             ),
             Tool(
                 name=GitTools.DIFF_UNSTAGED,
                 description="Shows changes in the working directory that are not yet staged",
-                inputSchema=GitDiffUnstaged.model_json_schema(),
+                inputSchema=GitDiffUnstaged.schema(),
             ),
             Tool(
                 name=GitTools.DIFF_STAGED,
                 description="Shows changes that are staged for commit",
-                inputSchema=GitDiffStaged.model_json_schema(),
+                inputSchema=GitDiffStaged.schema(),
             ),
             Tool(
                 name=GitTools.DIFF,
                 description="Shows differences between branches or commits",
-                inputSchema=GitDiff.model_json_schema(),
+                inputSchema=GitDiff.schema(),
             ),
             Tool(
                 name=GitTools.COMMIT,
                 description="Records changes to the repository",
-                inputSchema=GitCommit.model_json_schema(),
+                inputSchema=GitCommit.schema(),
             ),
             Tool(
                 name=GitTools.ADD,
                 description="Adds file contents to the staging area",
-                inputSchema=GitAdd.model_json_schema(),
+                inputSchema=GitAdd.schema(),
             ),
             Tool(
                 name=GitTools.RESET,
                 description="Unstages all staged changes",
-                inputSchema=GitReset.model_json_schema(),
+                inputSchema=GitReset.schema(),
             ),
             Tool(
                 name=GitTools.LOG,
                 description="Shows the commit logs",
-                inputSchema=GitLog.model_json_schema(),
+                inputSchema=GitLog.schema(),
             ),
             Tool(
                 name=GitTools.CREATE_BRANCH,
                 description="Creates a new branch from an optional base branch",
-                inputSchema=GitCreateBranch.model_json_schema(),
+                inputSchema=GitCreateBranch.schema(),
             ),
             Tool(
                 name=GitTools.CHECKOUT,
                 description="Switches branches",
-                inputSchema=GitCheckout.model_json_schema(),
+                inputSchema=GitCheckout.schema(),
             ),
             Tool(
                 name=GitTools.SHOW,
                 description="Shows the contents of a commit",
-                inputSchema=GitShow.model_json_schema(),
+                inputSchema=GitShow.schema(),
             ),
             Tool(
                 name=GitTools.INIT,
                 description="Initialize a new Git repository",
-                inputSchema=GitInit.model_json_schema(),
+                inputSchema=GitInit.schema(),
             )
         ]
 
