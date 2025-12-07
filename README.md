@@ -4,13 +4,18 @@ This repository is a collection of *reference implementations* for the [Model Co
 to community built servers and additional resources.
 
 The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.
-Each MCP server is implemented with either the [Typescript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk) or [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk).
+Typically, each MCP server is implemented with an MCP SDK:
+- [C# MCP SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- [Java MCP SDK](https://github.com/modelcontextprotocol/java-sdk)
+- [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+- [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
+- [Typescript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 
 > Note: Lists in this README are maintained in alphabetical order to minimize merge conflicts when adding new items.
 
 ## 🌟 Reference Servers
 
-These servers aim to demonstrate MCP features and the TypeScript and Python SDKs.
+These servers aim to demonstrate MCP features and the official SDKs.
 
 - **[Everything](src/everything)** - Reference / test server with prompts, resources, and tools
 - **[Fetch](src/fetch)** - Web content fetching and conversion for efficient LLM usage
@@ -112,6 +117,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://codelogic.com/wp-content/themes/codelogic/assets/img/favicon.png" alt="CodeLogic Logo" /> **[CodeLogic](https://github.com/CodeLogicIncEngineering/codelogic-mcp-server)** - Interact with [CodeLogic](https://codelogic.com), a Software Intelligence platform that graphs complex code and data architecture dependencies, to boost AI accuracy and insight.
 - <img height="12" width="12" src="https://static.coingecko.com/s/coingecko-logo-white-750bdea438e850281f784dffc8f4fd498415754f088d655a1140849745cb66ac.svg" alt="CoinGecko Logo" /> **[CoinGecko](https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server)** - Official [CoinGecko API](https://www.coingecko.com/en/api) MCP Server for Crypto Price & Market Data, across 200+ Blockchain Networks and 8M+ Tokens.
 - <img height="12" width="12" src="https://www.comet.com/favicon.ico" alt="Comet Logo" /> **[Comet Opik](https://github.com/comet-ml/opik-mcp)** - Query and analyze your [Opik](https://github.com/comet-ml/opik) logs, traces, prompts and all other telemtry data from your LLMs in natural language.
+- <img height="12" width="12" src="https://cdn.prod.website-files.com/6572bd8c27ee5db3eb91f4b3/6572bd8d27ee5db3eb91f55e_favicon-dashflow-webflow-template.svg" alt="OSS Conductor Logo" /> <img height="12" width="12" src="https://orkes.io/icons/icon-48x48.png" alt="Orkes Conductor Logo" />**[Conductor](https://github.com/conductor-oss/conductor-mcp)** - Interact with Conductor (OSS and Orkes) REST APIs.
 - <img height="12" width="12" src="https://www.confluent.io/favicon.ico" alt="Confluent Logo" /> **[Confluent](https://github.com/confluentinc/mcp-confluent)** - Interact with Confluent Kafka and Confluent Cloud REST APIs.
 - <img src="https://contrastsecurity.com/favicon.ico" alt="Contrast Security" width="12" height="12"> **[Contrast Security](https://github.com/Contrast-Security-OSS/mcp-contrast)** - Brings Contrast's vulnerability and SCA data into your coding agent to quickly remediate vulnerabilities.
 - <img height="12" width="12" src="https://www.convex.dev/favicon.ico" alt="Convex Logo" /> **[Convex](https://stack.convex.dev/convex-mcp-server)** - Introspect and query your apps deployed to Convex.
