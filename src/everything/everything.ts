@@ -46,7 +46,10 @@ const LongRunningOperationSchema = z.object({
     .number()
     .default(10)
     .describe("Duration of the operation in seconds"),
-  steps: z.number().default(5).describe("Number of steps in the operation"),
+  steps: z
+    .number()
+    .default(5)
+    .describe("Number of steps in the operation"),
 });
 
 const PrintEnvSchema = z.object({});
@@ -58,13 +61,6 @@ const SampleLLMSchema = z.object({
     .default(100)
     .describe("Maximum number of tokens to generate"),
 });
-
-// Example completion values
-const EXAMPLE_COMPLETIONS = {
-  style: ["casual", "formal", "technical", "friendly"],
-  temperature: ["0", "0.5", "0.7", "1.0"],
-  resourceId: ["1", "2", "3", "4", "5"],
-};
 
 const GetTinyImageSchema = z.object({});
 
@@ -116,10 +112,18 @@ enum PromptName {
   RESOURCE = "resource_prompt",
 }
 
+// Example completion values
+const EXAMPLE_COMPLETIONS = {
+  style: ["casual", "formal", "technical", "friendly"],
+  temperature: ["0", "0.5", "0.7", "1.0"],
+  resourceId: ["1", "2", "3", "4", "5"],
+};
+
 export const createServer = () => {
   const server = new Server(
     {
       name: "example-servers/everything",
+      title: "Everything Example Server",
       version: "1.0.0",
     },
     {
@@ -455,16 +459,16 @@ export const createServer = () => {
         inputSchema: zodToJsonSchema(AddSchema) as ToolInput,
       },
       {
-        name: ToolName.PRINT_ENV,
-        description:
-          "Prints all environment variables, helpful for debugging MCP server configuration",
-        inputSchema: zodToJsonSchema(PrintEnvSchema) as ToolInput,
-      },
-      {
         name: ToolName.LONG_RUNNING_OPERATION,
         description:
           "Demonstrates a long running operation with progress updates",
         inputSchema: zodToJsonSchema(LongRunningOperationSchema) as ToolInput,
+      },
+      {
+        name: ToolName.PRINT_ENV,
+        description:
+          "Prints all environment variables, helpful for debugging MCP server configuration",
+        inputSchema: zodToJsonSchema(PrintEnvSchema) as ToolInput,
       },
       {
         name: ToolName.SAMPLE_LLM,
@@ -608,35 +612,6 @@ export const createServer = () => {
       };
     }
 
-    if (name === ToolName.GET_RESOURCE_REFERENCE) {
-      const validatedArgs = GetResourceReferenceSchema.parse(args);
-      const resourceId = validatedArgs.resourceId;
-
-      const resourceIndex = resourceId - 1;
-      if (resourceIndex < 0 || resourceIndex >= ALL_RESOURCES.length) {
-        throw new Error(`Resource with ID ${resourceId} does not exist`);
-      }
-
-      const resource = ALL_RESOURCES[resourceIndex];
-
-      return {
-        content: [
-          {
-            type: "text",
-            text: `Returning resource reference for Resource ${resourceId}:`,
-          },
-          {
-            type: "resource",
-            resource: resource,
-          },
-          {
-            type: "text",
-            text: `You can access this resource using the URI: ${resource.uri}`,
-          },
-        ],
-      };
-    }
-
     if (name === ToolName.ANNOTATED_MESSAGE) {
       const { messageType, includeImage } = AnnotatedMessageSchema.parse(args);
 
@@ -688,6 +663,35 @@ export const createServer = () => {
       return { content };
     }
 
+    if (name === ToolName.GET_RESOURCE_REFERENCE) {
+      const validatedArgs = GetResourceReferenceSchema.parse(args);
+      const resourceId = validatedArgs.resourceId;
+
+      const resourceIndex = resourceId - 1;
+      if (resourceIndex < 0 || resourceIndex >= ALL_RESOURCES.length) {
+        throw new Error(`Resource with ID ${resourceId} does not exist`);
+      }
+
+      const resource = ALL_RESOURCES[resourceIndex];
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Returning resource reference for Resource ${resourceId}:`,
+          },
+          {
+            type: "resource",
+            resource: resource,
+          },
+          {
+            type: "text",
+            text: `You can access this resource using the URI: ${resource.uri}`,
+          },
+        ],
+      };
+    }
+
     if (name === ToolName.ELICITATION) {
       ElicitationSchema.parse(args);
 
@@ -709,13 +713,13 @@ export const createServer = () => {
 
       // Handle different response actions
       const content = [];
-      
+
       if (elicitationResult.action === 'accept' && elicitationResult.content) {
         content.push({
           type: "text",
           text: `✅ User provided their favorite things!`,
         });
-        
+
         // Only access elicitationResult.content when action is accept
         const { color, number, pets } = elicitationResult.content;
         content.push({
@@ -733,7 +737,7 @@ export const createServer = () => {
           text: `⚠️ User cancelled the elicitation dialog.`,
         });
       }
-      
+
       // Include raw result for debugging
       content.push({
         type: "text",
@@ -742,7 +746,7 @@ export const createServer = () => {
 
       return { content };
     }
-    
+
     if (name === ToolName.GET_RESOURCE_LINKS) {
       const { count } = GetResourceLinksSchema.parse(args);
       const content = [];
