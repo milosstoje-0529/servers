@@ -311,6 +311,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/211697972" alt="Offorte Logo" /> **[Offorte](https://github.com/offorte/offorte-mcp-server#readme)** - Offorte Proposal Software official MCP server enables creation and sending of business proposals.
 - <img height="12" width="12" src="https://maps.olakrutrim.com/favicon.ico" alt="Ola Maps" /> **[OlaMaps](https://pypi.org/project/ola-maps-mcp-server)** - Official Ola Maps MCP Server for services like geocode, directions, place details and many more.
 - <img height="12" width="12" src="https://static.onlyoffice.com/images/favicon.ico" alt="ONLYOFFICE DocSpace" /> **[ONLYOFFICE DocSpace](https://github.com/ONLYOFFICE/docspace-mcp)** - Interact with [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) API to create rooms, manage files and folders.
+- **[OMOP MCP](https://github.com/OHNLP/omop_mcp)** - Map clinical terminology to OMOP concepts using LLMs for healthcare data standardization.
 - <img height="12" width="12" src="https://op.gg/favicon.ico" alt="OP.GG Logo" /> **[OP.GG](https://github.com/opgginc/opgg-mcp)** - Access real-time gaming data across popular titles like League of Legends, TFT, and Valorant, offering champion analytics, esports schedules, meta compositions, and character statistics.
 - <img height="12" width="12" src="https://www.openfort.io/img/icon.svg" alt="Openfort" /> **[Openfort](https://github.com/openfort-xyz/mcp)** - Connect your AI to Openfort's smart wallet, auth, and project infrastructure.
 - <img height="12" width="12" src="https://open-metadata.org/favicon.ico" alt="OpenMetadata" /> **[OpenMetadata](https://open-metadata.org/mcp)** - The first Enterprise-grade MCP server for metadata
@@ -1226,6 +1227,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[YouTube](https://github.com/Klavis-AI/klavis/tree/main/mcp_servers/youtube)** - Extract Youtube video information (with proxies support).
 - **[YouTube](https://github.com/ZubeidHendricks/youtube-mcp-server)** - Comprehensive YouTube API integration for video management, Shorts creation, and analytics.
 - **[YouTube DLP](https://github.com/AgentX-ai/youtube-dlp-server)** - Retrieve video information, subtitles, and top comments with proxies.
+- **[YouTube MCP](https://github.com/aardeshir/youtube-mcp)** - Create playlists from song lists with OAuth2. Search videos, manage playlists, let AI curate your YouTube collections.
 - **[Youtube Uploader MCP](https://github.com/anwerj/youtube-uploader-mcp)** - AI‑powered YouTube uploader—no CLI, no YouTube Studio.
 - **[YouTube Video Summarizer](https://github.com/nabid-pf/youtube-video-summarizer-mcp)** - Summarize lengthy youtube videos.
 - **[yutu](https://github.com/eat-pray-ai/yutu)** - A fully functional MCP server and CLI for YouTube to automate YouTube operation.
