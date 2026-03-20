@@ -2,6 +2,9 @@
 
 This repository is a collection of *reference implementations* for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), as well as references to community-built servers and additional resources.
 
+> [!IMPORTANT]
+> If you are looking for a list of MCP servers, you can browse published servers on [the MCP Registry](https://registry.modelcontextprotocol.io/). The repository served by this README is dedicated to housing just the small number of reference servers maintained by the MCP steering group.
+
 The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.
 Typically, each MCP server is implemented with an MCP SDK:
 
@@ -15,9 +18,6 @@ Typically, each MCP server is implemented with an MCP SDK:
 - [Rust MCP SDK](https://github.com/modelcontextprotocol/rust-sdk)
 - [Swift MCP SDK](https://github.com/modelcontextprotocol/swift-sdk)
 - [TypeScript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
-
-> [!NOTE]
-> Lists in this README are maintained in alphabetical order to minimize merge conflicts when adding new items.
 
 ## 🌟 Reference Servers
 
@@ -50,6 +50,9 @@ The following reference servers are now archived and can be found at [servers-ar
 - **[SQLite](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite)** - Database interaction and business intelligence capabilities.
 
 ## 🤝 Third-Party Servers
+
+> [!NOTE]
+The server lists in this README are no longer maintained and will eventually be removed.
 
 ### 🎖️ Official Integrations
 
@@ -341,7 +344,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://www.motherduck.com/favicon.ico" alt="MotherDuck Logo" /> **[MotherDuck](https://github.com/motherduckdb/mcp-server-motherduck)** - Query and analyze data with MotherDuck and local DuckDB
 - <img height="12" width="12" src="https://docs.mulesoft.com/_/img/favicon.ico" alt="Mulesoft Logo" /> **[Mulesoft](https://www.npmjs.com/package/@mulesoft/mcp-server)** - Build, deploy, and manage MuleSoft applications with natural language, directly inside any compatible IDE.
 - <img height="12" width="12" src="https://www.multiplayer.app/favicon-32x32.png" alt="Multiplayer Logo" /> **[Multiplayer](https://www.multiplayer.app/docs/ai/mcp-server)** - Analyze your full stack session recordings easily. Record a bug with Multiplayer, analyze and fix it with LLM
-- <img height="12" width="12" src="https://raw.githubusercontent.com/NangoHQ/nango/refs/heads/master/docs-v2/images/logo/logo-light-mode.svg" alt="Nango Logo" /> **[Nango](https://docs.nango.dev/guides/use-cases/mcp-server)** - Integrate your AI agent with 500+ APIs: Auth, custom tools, and observability. Open-source.
+- <img height="12" width="12" src="https://raw.githubusercontent.com/NangoHQ/nango/refs/heads/master/docs/images/logo/logo-light-mode.svg" alt="Nango Logo" /> **[Nango](https://nango.dev/docs/guides/use-cases/ai-tool-calling)** - Integrate your AI agent with 500+ APIs: Auth, custom tools, and observability. Open-source.
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/38020270" alt="NanoVMs Logo" /> **[NanoVMs](https://github.com/nanovms/ops-mcp)** - Easily Build and Deploy unikernels to any cloud.
 - <img height="12" width="12" src="https://needle-ai.com/images/needle-logo-orange-2-rounded.png" alt="Needle AI Logo" /> **[Needle](https://github.com/needle-ai/needle-mcp)** - Production-ready RAG out of the box to search and retrieve data from your own documents.
 - <img height="12" width="12" src="https://neo4j.com/favicon.ico" alt="Neo4j Logo" /> **[Neo4j](https://github.com/neo4j-contrib/mcp-neo4j/)** - Neo4j graph database server (schema + read/write-cypher) and separate graph database backed memory
@@ -452,7 +455,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://pics.fatwang2.com/56912e614b35093426c515860f9f2234.svg" alt="Search1API Logo" /> **[Search1API](https://github.com/fatwang2/search1api-mcp)** - One API for Search, Crawling, and Sitemaps
 - <img height="12" width="12" src="https://www.searchunify.com/favicon.ico" alt="SearchUnify Logo" /> **[SearchUnify](https://github.com/searchunify/su-mcp/)** - SearchUnify MCP Server (su-mcp) enables seamless integration of SearchUnify with Claude Desktop
 - <img height="12" width="12" src="https://secureframe.com/favicon.ico" alt="Secureframe Logo" /> **[Secureframe](https://github.com/secureframe/secureframe-mcp-server)** - Query security controls, monitor compliance tests, and access audit data across SOC 2, ISO 27001, CMMC, FedRAMP, and other frameworks from [Secureframe](https://secureframe.com).
-- <img height="12" width="12" src="https://semgrep.dev/favicon.ico" alt="Semgrep Logo" /> **[Semgrep](https://github.com/semgrep/mcp)** - Enable AI agents to secure code with [Semgrep](https://semgrep.dev/).
+- <img height="12" width="12" src="https://semgrep.dev/favicon.ico" alt="Semgrep Logo" /> **[Semgrep](https://github.com/semgrep/semgrep/blob/develop/cli/src/semgrep/mcp/README.md)** - Enable AI agents to secure code with [Semgrep](https://semgrep.dev/).
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/187640573?s=48&v=4" alt="Sequa Logo" /> **[Sequa.AI](https://github.com/sequa-ai/sequa-mcp)** - Stop stitching context for Copilot and Cursor. With [Sequa MCP](https://github.com/sequa-ai/sequa-mcp), your AI tools know all your codebases and docs out of the box.
 - <img height="12" width="12" src="https://cdn.prod.website-files.com/6372338e5477e047032b37a5/64f85e6388a2a5c8c9525b4d_favLogo.png" alt="Shortcut Logo" /> **[Shortcut](https://github.com/useshortcut/mcp-server-shortcut)** - Access and implement all of your projects and tasks (Stories) from [Shortcut](https://shortcut.com/).
 - <img height="12" width="12" src="https://simplifier.io/favicon.ico" alt="Simplifier Logo" /> **[Simplifier](https://github.com/simplifier-ag/simplifier-mcp)** - Manage connectors, business objects and more in your [Simplifier](https://simplifier.io/) low code platform.
@@ -464,6 +467,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img src="https://sophtron.com/favicon.ico" alt="Sophtron" width="12" height="12"> **[Sophtron](https://github.com/sophtron/Sophtron-Integration/tree/main/modelcontextprotocol)** - Connect to your bank, credit card, utilities accounts to retrieve account balances and transactions with [Sophtron Bank Integration](https://sophtron.com).
 - <img height="12" width="12" src="https://learn.microsoft.com/favicon.ico" alt="Microsoft Learn Logo" /> **[SQL Server](https://github.com/Azure-Samples/SQL-AI-samples/tree/main/MssqlMcp)** - Official Microsoft SQL Server MCP<sup>[1](https://devblogs.microsoft.com/azure-sql/introducing-mssql-mcp-server/)</sup>
 - <img height="12" width="12" src="https://www.stackhawk.com/wp-content/uploads/2025/03/icon-512x512-2-150x150.png" alt="StackHawk Logo" /> **[StackHawk](https://github.com/stackhawk/stackhawk-mcp)** - Use [StackHawk](https://www.stackhawk.com/) to test for and FIX security problems in your code or vibe coded app.
+- <img height="12" width="12" src="https://stackoverflow.com/Content/Sites/stackoverflow/Img/apple-touch-icon@2.png" alt="StackOverflow Logo" /> **[Stack Overflow](https://api.stackexchange.com/docs/mcp-server)** - Access Stack Overflow's trusted and verified technical questions and answers.
 - <img height="12" width="12" src="https://www.starrocks.io/favicon.ico" alt="StarRocks Logo" /> **[StarRocks](https://github.com/StarRocks/mcp-server-starrocks)** - Interact with [StarRocks](https://www.starrocks.io/)
 - <img height="12" width="12" src="https://downloads.steadybit.com/logomark.svg" alt="Steadybit Logo" /> **[Steadybit](https://github.com/steadybit/mcp)** - Interact with [Steadybit](https://www.steadybit.com/)
 - <img height="12" width="12" src="https://steuerboard.net/favicon.ico" alt="Steuerboard Logo" /> **[Steuerboard](https://github.com/steuerboard/steuerboard-mcp-typescript)** - Interact with the accounting data in your business using our official MCP server
@@ -853,6 +857,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[GraphQL](https://github.com/drestrepom/mcp_graphql)** - Comprehensive GraphQL API integration that automatically exposes each GraphQL query as a separate tool.
 - **[GraphQL Schema](https://github.com/hannesj/mcp-graphql-schema)** - Allow LLMs to explore large GraphQL schemas without bloating the context.
 - **[Graylog](https://github.com/Pranavj17/mcp-server-graylog)** - Search Graylog logs by absolute/relative timestamps, filter by streams, and debug production issues directly from Claude Desktop.
+- **[Grok-MCP](https://github.com/merterbak/Grok-MCP)** - MCP server for xAI’s API featuring the latest Grok models, image analysis & generation, and web search.
 - **[gx-mcp-server](https://github.com/davidf9999/gx-mcp-server)** - Expose Great Expectations data validation and quality checks as MCP tools for AI agents.
 - **[HackMD](https://github.com/yuna0x0/hackmd-mcp)** (by yuna0x0) - An MCP server for HackMD, a collaborative markdown editor. It allows users to create, read, and update documents in HackMD using the Model Context Protocol.
 - **[HAProxy](https://github.com/tuannvm/haproxy-mcp-server)** - A Model Context Protocol (MCP) server for HAProxy implemented in Go, leveraging HAProxy Runtime API.
