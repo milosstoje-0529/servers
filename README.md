@@ -2,6 +2,9 @@
 
 This repository is a collection of *reference implementations* for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), as well as references to community-built servers and additional resources.
 
+> [!IMPORTANT]
+> If you are looking for a list of MCP servers, you can browse published servers on [the MCP Registry](https://registry.modelcontextprotocol.io/). The repository served by this README is dedicated to housing just the small number of reference servers maintained by the MCP steering group.
+
 The servers in this repository showcase the versatility and extensibility of MCP, demonstrating how it can be used to give Large Language Models (LLMs) secure, controlled access to tools and data sources.
 Typically, each MCP server is implemented with an MCP SDK:
 
@@ -15,9 +18,6 @@ Typically, each MCP server is implemented with an MCP SDK:
 - [Rust MCP SDK](https://github.com/modelcontextprotocol/rust-sdk)
 - [Swift MCP SDK](https://github.com/modelcontextprotocol/swift-sdk)
 - [TypeScript MCP SDK](https://github.com/modelcontextprotocol/typescript-sdk)
-
-> [!NOTE]
-> Lists in this README are maintained in alphabetical order to minimize merge conflicts when adding new items.
 
 ## 🌟 Reference Servers
 
@@ -50,6 +50,9 @@ The following reference servers are now archived and can be found at [servers-ar
 - **[SQLite](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite)** - Database interaction and business intelligence capabilities.
 
 ## 🤝 Third-Party Servers
+
+> [!NOTE]
+The server lists in this README are no longer maintained and will eventually be removed.
 
 ### 🎖️ Official Integrations
 
@@ -100,6 +103,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://assets.atlan.com/assets/atlan-a-logo-blue-background.png" alt="Atlan Logo" /> **[Atlan](https://github.com/atlanhq/agent-toolkit/tree/main/modelcontextprotocol)** - The Atlan Model Context Protocol server allows you to interact with the [Atlan](https://www.atlan.com/) services through multiple tools.
 - <img height="12" width="12" src="https://www.atlassian.com/favicon.ico" alt="Atlassian Logo" /> **[Atlassian](https://www.atlassian.com/platform/remote-mcp-server)** - Securely interact with Jira work items and Confluence pages, and search across both.
 - <img height="12" width="12" src="https://res.oafimg.cn/-/737b3b3ffed9b19e/logo.png" alt="AtomGit Logo" /> **[AtomGit](https://atomgit.com/atomgit-open-source-ecosystem/atomgit-mcp-server)** - Official AtomGit server for integration with repository management, PRs, issues, branches, labels, and more.
+- <img height="12" width="12" src="https://atono.io/favicon.ico" alt="Atono Logo" /> **[Atono](https://docs.atono.io/docs/mcp-server-for-atono/)** - Modern product teams connect their AI assistant to Atono to create and update stories, bugs, assignments and fixes.
 - <img height="12" width="12" src="https://resources.audiense.com/hubfs/favicon-1.png" alt="Audiense Logo" /> **[Audiense Insights](https://github.com/AudienseCo/mcp-audiense-insights)** - Marketing insights and audience analysis from [Audiense](https://www.audiense.com/products/audiense-insights) reports, covering demographic, cultural, influencer, and content engagement analysis.
 - <img height="12" width="12" src="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg" alt="Auth0 Logo" /> **[Auth0](https://github.com/auth0/auth0-mcp-server)** - MCP server for interacting with your Auth0 tenant, supporting creating and modifying actions, applications, forms, logs, resource servers, and more.
 - <img height="12" width="12" src="https://firstorder.ai/favicon_auth.ico" alt="Authenticator App Logo" /> **[Authenticator App · 2FA](https://github.com/firstorderai/authenticator_mcp)** - A secure MCP (Model Context Protocol) server that enables AI agents to interact with the Authenticator App.
@@ -146,6 +150,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://cleanupcrew.ai/favicon-light.png" alt="Cleanup Crew logo" /> **[Cleanup Crew](https://cleanupcrew.ai/install)** - Real-time human support service for non-technical founders using AI coding tools. When AI hits a wall, request instant human help directly from your IDE.
 - <img height="12" width="12" src="https://clickhouse.com/favicon.ico" alt="ClickHouse Logo" /> **[ClickHouse](https://github.com/ClickHouse/mcp-clickhouse)** - Query your [ClickHouse](https://clickhouse.com/) database server.
 - <img height="12" width="12" src="https://brand.clicksend.com/_ipx/s_794x608/img/clicksend_icon_only.svg" alt="ClickSend Logo" /> **[ClickSend](https://github.com/ClickSend/clicksend-mcp-server/)** - This is the official ClickSend MCP Server developed by ClickSend team.
+- <img height="12" width="12" src="https://avatars.githubusercontent.com/u/206176626?s=200&v=4" alt="Clix Logo" /> **[Clix MCP Server](https://github.com/clix-so/clix-mcp-server)** - Clix MCP Server that enables AI agents to provide real-time, trusted Clix documentation and SDK code examples for seamless integrations.
 - <img height="12" width="12" src="https://7463-tcb-advanced-a656fc-1257967285.tcb.qcloud.la/mcp/cloudbase-logo.svg" alt="CloudBase Logo" /> **[CloudBase](https://github.com/TencentCloudBase/CloudBase-AI-ToolKit)** - One-stop backend services for WeChat Mini-Programs and full-stack apps with serverless cloud functions and databases by [Tencent CloudBase](https://tcb.cloud.tencent.com/)
 - <img height="12" width="12" src="https://www.cloudbees.com/favicon.ico" alt="CloudBees Logo" /> **[CloudBees CI](https://docs.cloudbees.com/docs/cloudbees-ci-mcp-router/latest/)** - Enable AI access to your [CloudBees CI](https://www.cloudbees.com/capabilities/continuous-integration) cluster, the Enterprise-grade Jenkins®-based solution. 
 - <img height="12" width="12" src="https://www.cloudbees.com/favicon.ico" alt="CloudBees Logo" /> **[CloudBees Unify](https://docs.cloudbees.com/docs/cloudbees-unify-mcp-server/latest/install/mcp-server)** - Enable AI access to your [CloudBees Unify](https://www.cloudbees.com/unify) environment.
@@ -206,7 +211,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://static.edubase.net/media/brand/favicon/favicon-32x32.png" alt="EduBase Logo" /> **[EduBase](https://github.com/EduBase/MCP)** - Interact with [EduBase](https://www.edubase.net), a comprehensive e-learning platform with advanced quizzing, exam management, and content organization capabilities
 - <img height="12" width="12" src="https://www.elastic.co/favicon.ico" alt="Elasticsearch Logo" /> **[Elasticsearch](https://github.com/elastic/mcp-server-elasticsearch)** - Query your data in [Elasticsearch](https://www.elastic.co/elasticsearch)
 - <img height="12" width="12" src="https://www.elastic.co/favicon.ico" alt="Elasticsearch Memory Logo" /> **[Elasticsearch Memory](https://github.com/fredac100/elasticsearch-memory-mcp)** - Persistent memory with hierarchical categorization, semantic search, and intelligent auto-detection. Install via [PyPI](https://pypi.org/project/elasticsearch-memory-mcp/).
-- <img height="12" width="12" src="https://elasticemail.com/favicon.ico" alt="Elastic Email Logo" /> **[Elastic Email MCP](https://github.com/ElasticEmail/elasticemail-mcp-server)** - Elastic Email MCP Server delivers full-scale email capabilities to the next generation of AI agents and MCP-compatible environments.
+- <img height="12" width="12" src="https://elasticemail.com/favicon.ico" alt="Elastic Email Logo" /> **[Elastic Email](https://github.com/ElasticEmail/elasticemail-mcp-server)** - Elastic Email MCP Server delivers full-scale email capabilities to the next generation of AI agents and MCP-compatible environments.
 - <img height="12" width="12" src="https://github.com/EmberAGI/arbitrum-vibekit/blob/main/img/Ember%20Black.png?raw=true" alt="Ember AI Logo" /> **[Ember AI](https://docs.emberai.xyz/)** - A unified MCP server that enables AI agents to execute cross-chain DeFi strategies.
 - <img height="12" width="12" src="https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/656ecc07555afac40df4c40e_Facicon.png" alt="Endor Labs Logo" /> **[Endor Labs](https://docs.endorlabs.com/deployment/ide/mcp/)** - Find and fix security risks in you code. Integrate [Endor Labs](https://endorlabs.com) to scan and secure your code from vulnerabilities and secret leaks.
 - <img height="12" width="12" src="https://esignatures.com/favicon.ico" alt="eSignatures Logo" /> **[eSignatures](https://github.com/esignaturescom/mcp-server-esignatures)** - Contract and template management for drafting, reviewing, and sending binding contracts.
@@ -258,6 +263,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://img.alicdn.com/imgextra/i3/O1CN01d9qrry1i6lTNa2BRa_!!6000000004364-2-tps-218-200.png" alt="Hologres Logo" /> **[Hologres](https://github.com/aliyun/alibabacloud-hologres-mcp-server)** - Connect to a [Hologres](https://www.alibabacloud.com/en/product/hologres) instance, get table metadata, query and analyze data.
 - <img height="12" width="12" src="https://brew.sh/assets/img/favicon.ico" alt="Homebrew Logo" /> **[Homebrew](https://docs.brew.sh/MCP-Server)** Allows [Homebrew](https://brew.sh) users to run Homebrew commands locally.
 - <img height="12" width="12" src="https://www.honeycomb.io/favicon.ico" alt="Honeycomb Logo" /> **[Honeycomb](https://github.com/honeycombio/honeycomb-mcp)** Allows [Honeycomb](https://www.honeycomb.io/) Enterprise customers to query and analyze their data, alerts, dashboards, and more; and cross-reference production behavior with the codebase.
+- <img height="12" width="12" src="https://hopx.ai/favicon.ico" alt="HOPX Logo" /> **[HOPX](https://github.com/hopx-ai/mcp)** - Execute Python, JavaScript, Bash, and Go code in isolated cloud containers with sub-150ms startup times. Pre-installed data science libraries (pandas, numpy, matplotlib) for AI-powered data analysis and code testing.
 - <img height="12" width="12" src="https://static.hsinfrastatic.net/StyleGuideUI/static-3.438/img/sprocket/favicon-32x32.png" alt="HubSpot Logo" /> **[HubSpot](https://developer.hubspot.com/mcp)** - Connect, manage, and interact with [HubSpot](https://www.hubspot.com/) CRM data
 - <img height="12" width="12" src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" alt="HuggingFace Logo" /> **[Hugging Face](https://huggingface.co/settings/mcp)** - Connect to the Hugging Face Hub APIs programmatically: semantic search for spaces and papers, exploration of datasets and models, and access to all compatible MCP Gradio tool spaces!
 - <img height="12" width="12" src="https://hunter.io/favicon.ico" alt="Hunter Logo" /> **[Hunter](https://github.com/hunter-io/hunter-mcp)** - Interact with the [Hunter API](https://hunter.io) to get B2B data using natural language.
@@ -356,11 +362,13 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://neo4j.com/favicon.ico" alt="Neo4j Logo" /> **[Neo4j GDS](https://github.com/neo4j-contrib/gds-agent)** - Neo4j graph data science server with comprehensive graph algorithms that enables complex graph reasoning and Q&A.
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/183852044?s=48&v=4" alt="Neon Logo" /> **[Neon](https://github.com/neondatabase/mcp-server-neon)** - Interact with the Neon serverless Postgres platform
 - <img height="12" width="12" src="https://app.usenerve.com/favicon.ico" alt="Nerve Logo" /> **[Nerve](https://github.com/nerve-hq/nerve-mcp-server)** - Search and Act on all your company data across all your SaaS apps via [Nerve](https://www.usenerve.com/)
+- <img height="12" width="12" src="https://avatars.githubusercontent.com/u/370544" alt="NetApp Logo" /> **[NetApp](https://github.com/NetApp/mcp)** - Query metrics, manage volumes, and search across your NetApp systems and services.
 - <img height="12" width="12" src="https://www.netdata.cloud/favicon-32x32.png" alt="Netdata Logo" /> **[Netdata](https://github.com/netdata/netdata/blob/master/src/web/mcp/README.md)** - Discovery, exploration, reporting and root cause analysis using all observability data, including metrics, logs, systems, containers, processes, and network connections
 - <img height="12" width="12" src="https://www.netlify.com/favicon/icon.svg" alt="Netlify Logo" /> **[Netlify](https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server/)** - Create, build, deploy, and manage your websites with Netlify web platform.
 - <img height="12" width="12" src="https://www.thenile.dev/favicon.ico" alt="Nile Logo" /> **[Nile](https://github.com/niledatabase/nile-mcp-server)** - An MCP server that talks to Nile - Postgres re-engineered for B2B apps. Manage and query databases, tenants, users, auth using LLMs
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/208441832?s=400&v=4" alt="Nodit Logo" /> **[Nodit](https://github.com/noditlabs/nodit-mcp-server)** - Official Nodit MCP Server enabling access to multi-chain RPC Nodes and Data APIs for blockchain data.
 - <img height="12" width="12" src="https://app.norman.finance/favicons/favicon-32x32.png" alt="Norman Logo" /> **[Norman Finance](https://github.com/norman-finance/norman-mcp-server)** - MCP server for managing accounting and taxes with Norman Finance.
+- <img height="12" width="12" src="https://notifly.tech/favicon.ico" alt="Notifly Logo" /> **[Notifly](https://github.com/notifly-tech/notifly-mcp-server)** - Notifly MCP Server that enables AI agents to provide real-time, trusted Notifly documentation and SDK code examples for seamless integrations.
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/4792552?s=200&v=4" alt="Notion Logo" /> **[Notion](https://github.com/makenotion/notion-mcp-server#readme)** - This project implements an MCP server for the Notion API.
 - <img height="12" width="12" src="https://www.nutrient.io/assets/images/logos/nutrient.svg" alt="Nutrient Logo" /> **[Nutrient](https://github.com/PSPDFKit/nutrient-dws-mcp-server)** - Create, Edit, Sign, Extract Documents using Natural Language
 - <img height="12" width="12" src="https://nx.dev/favicon/favicon.svg" alt="Nx Logo" /> **[Nx](https://github.com/nrwl/nx-console/blob/master/apps/nx-mcp)** - Makes [Nx's understanding](https://nx.dev/features/enhance-AI) of your codebase accessible to LLMs, providing insights into the codebase architecture, project relationships and runnable tasks thus allowing AI to make precise code suggestions.
@@ -409,6 +417,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://www.plugged.in/favicon.ico" alt="Plugged.in Logo" /> **[Plugged.in](https://github.com/VeriTeknik/pluggedin-mcp)** - A comprehensive proxy that combines multiple MCP servers into a single MCP. It provides discovery and management of tools, prompts, resources, and templates across servers, plus a playground for debugging when building MCP servers.
 - <img height="12" width="12" src="https://p-link.io/favicon.ico" alt="P-Link.io Logo" /> **[P-Link.io](https://github.com/paracetamol951/P-Link-MCP)** - HTTP 402 Protocol implementation on Solana network. Sending & receiving payments for agents
 - <img height="12" width="12" src="https://polymarket.com/favicon.ico" alt="Polymarket Logo" /> **[Polymarket](https://github.com/ozgureyilmaz/polymarket-mcp)** - Real-time prediction market data from Polymarket - search markets, analyze prices, identify trading opportunities.
+- <img height="12" width="12" src="https://plusai.com/622ffb3448f15ce7a33c6a2b/652d81ccc31a7d50861db0ef_plus_favicon.ico" alt="Plus AI Logo" /> **[Plus AI](https://plusai.com/features/mcp)** - A Model Context Protocol (MCP) server for automatically generating professional PowerPoint and Google Slides presentations using the [Plus AI](https://plusai.com/) presentation API.
 - <img height="12" width="12" src="https://github.com/port-labs/port-mcp-server/blob/main/assets/port_symbol_white.svg" alt="Port Logo" /> **[Port IO](https://github.com/port-labs/port-mcp-server)** - Access and manage your software catalog to improve service quality and compliance.
 - **[PostHog](https://github.com/posthog/mcp)** - Interact with PostHog analytics, feature flags, error tracking and more with the official PostHog MCP server.
 - <img height="12" width="12" src="https://postidentity.com/favicon.ico" alt="PostIdentity Logo" /> **[PostIdentity](https://github.com/PostIdentity/mcp-server)** - Generate AI-powered social media posts from any AI assistant. Manage identities, create posts, track referrals, and browse marketplace templates, powered by [PostIdentity](https://postidentity.com).
@@ -463,6 +472,7 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://www.searchunify.com/favicon.ico" alt="SearchUnify Logo" /> **[SearchUnify](https://github.com/searchunify/su-mcp/)** - SearchUnify MCP Server (su-mcp) enables seamless integration of SearchUnify with Claude Desktop
 - <img height="12" width="12" src="https://secureframe.com/favicon.ico" alt="Secureframe Logo" /> **[Secureframe](https://github.com/secureframe/secureframe-mcp-server)** - Query security controls, monitor compliance tests, and access audit data across SOC 2, ISO 27001, CMMC, FedRAMP, and other frameworks from [Secureframe](https://secureframe.com).
 - <img height="12" width="12" src="https://semgrep.dev/favicon.ico" alt="Semgrep Logo" /> **[Semgrep](https://github.com/semgrep/semgrep/blob/develop/cli/src/semgrep/mcp/README.md)** - Enable AI agents to secure code with [Semgrep](https://semgrep.dev/).
+- <img height="12" width="12" src="https://semilattice.ai/favicon.png" alt="Semilattice icon" /> **[Semilattice](https://github.com/semilattice-research/mcp)** - Test content, personalise features, and A/B test decisions with accurate audience prediction.
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/187640573?s=48&v=4" alt="Sequa Logo" /> **[Sequa.AI](https://github.com/sequa-ai/sequa-mcp)** - Stop stitching context for Copilot and Cursor. With [Sequa MCP](https://github.com/sequa-ai/sequa-mcp), your AI tools know all your codebases and docs out of the box.
 - <img height="12" width="12" src="https://cdn.prod.website-files.com/6372338e5477e047032b37a5/64f85e6388a2a5c8c9525b4d_favLogo.png" alt="Shortcut Logo" /> **[Shortcut](https://github.com/useshortcut/mcp-server-shortcut)** - Access and implement all of your projects and tasks (Stories) from [Shortcut](https://shortcut.com/).
 - <img height="12" width="12" src="https://simplifier.io/favicon.ico" alt="Simplifier Logo" /> **[Simplifier](https://github.com/simplifier-ag/simplifier-mcp)** - Manage connectors, business objects and more in your [Simplifier](https://simplifier.io/) low code platform.
@@ -510,10 +520,12 @@ Official integrations are maintained by companies building production ready MCP 
 - <img height="12" width="12" src="https://images.thetradeagent.ai/trade_agent/logo.svg" alt="Trade Agent Logo" /> **[Trade Agent](https://github.com/Trade-Agent/trade-agent-mcp)** - Execute stock and crypto trades on your brokerage via [Trade Agent](https://thetradeagent.ai)
 - <img height="18" width="18" src="https://github.com/twelvedata/mcp/raw/develop/favicon.ico" alt="Twelvedata Logo" /> **[Twelve Data](https://github.com/twelvedata/mcp)** — Integrate your AI agents with real-time and historical financial market data through our official [Twelve Data](https://twelvedata.com) MCP server.
 - <img height="12" width="12" src="https://www.twilio.com/content/dam/twilio-com/core-assets/social/favicon-16x16.png" alt="Twilio Logo" /> **[Twilio](https://github.com/twilio-labs/mcp)** - Interact with [Twilio](https://www.twilio.com/en-us) APIs to send SMS messages, manage phone numbers, configure your account, and more.
+- <img height="12" width="12" src="https://miniprogram.tcsas-superapp.com/icon_512.png" alt="TCSAS Logo" /> **[TCSAS](https://github.com/TCMPP-Team/tcsas-devtools-mcp-server)** - Built on the Tencent Mini Program technical framework and fully following the development, powered by [Tencent Cloud Super App as a Service](https://www.tencentcloud.com/products/tcsas?lang=en&pg=).
 - <img height="12" width="12" src="https://uberall.com/media/favicon.svg" alt="Uberall Logo" /> **[Uberall](https://github.com/uberall/uberall-mcp-server)** – Manage multi - location presence, including listings, reviews, and social posting, via [uberall](https://uberall.com).
 - <img height="12" width="12" src="https://avatars.githubusercontent.com/u/91906527" alt="Unblocked Logo" /> **[Unblocked](https://docs.getunblocked.com/unblocked-mcp)** Help your AI-powered IDEs generate faster, more accurate code by giving them access to context from Slack, Confluence, Google Docs, JIRA, and more with [Unblocked](https://getunblocked.com).
 - <img height="12" width="12" src="https://unifai.network/favicon.ico" alt="UnifAI Logo" /> **[UnifAI](https://github.com/unifai-network/unifai-mcp-server)** - Dynamically search and call tools using [UnifAI Network](https://unifai.network)
 - <img height="12" width="12" src="https://framerusercontent.com/images/plcQevjrOYnyriuGw90NfQBPoQ.jpg" alt="Unstructured Logo" /> **[Unstructured](https://github.com/Unstructured-IO/UNS-MCP)** - Set up and interact with your unstructured data processing workflows in [Unstructured Platform](https://unstructured.io)
+- <img height="12" width="12" src="https://uno-assets.platform.uno/logos/PNG/Uno_Platform_Symbol_RW.png" alt="Uno Platform Logo" /> **[Uno Platform](https://platform.uno/)** - Connects agents and developers to [Uno Platform's](https://aka.platform.uno/mcp) knowledge base - docs, APIs, and best practices allowing for building cross-platform .NET applications.
 - <img height="12" width="12" src="https://upstash.com/icons/favicon-32x32.png" alt="Upstash Logo" /> **[Upstash](https://github.com/upstash/mcp-server)** - Manage Redis databases and run Redis commands on [Upstash](https://upstash.com/) with natural language.
 - <img height="12" width="12" src="https://raw.githubusercontent.com/e2e-test-quest/uuv/refs/heads/main/uuv.ico" alt="UUV Logo" /> **[UUV](https://github.com/e2e-test-quest/uuv/tree/main/packages/mcp-server)** - Generate human readable end to end tests with [UUV](https://e2e-test-quest.github.io/uuv/).
 - <img height="12" width="12" src="http://vaadin.com/favicon.ico" alt="Vaadin Logo" /> **[Vaadin](https://github.com/marcushellberg/vaadin-documentation-services)** - Search Vaadin documentation, get the full documentation, and get version information. Designed for AI agents.
@@ -551,6 +563,7 @@ Official integrations are maintained by companies building production ready MCP 
 - **[ZettelkastenSpace](https://github.com/joshylchen/zettelkasten_space)** - Built on the proven [Zettelkasten](https://www.zettelkasten.space/) method, enhanced with Claude Desktop integration via Model Context Protocol 
 - <img height="12" width="12" src="https://www.zine.ai/images/zine-logo.png" alt="Zine Logo" /> **[Zine](https://www.zine.ai)** - Your memory, everywhere AI goes. Think iPhoto for your knowledge - upload and curate. Like ChatGPT but portable - context that travels with you.
 - <img height="12" width="12" src="https://zizai.work/images/logo.jpg" alt="ZIZAI Logo" /> **[ZIZAI Recruitment](https://github.com/zaiwork/mcp)** - Interact with the next-generation intelligent recruitment platform for employees and employers, powered by [ZIZAI Recruitment](https://zizai.work).
+
 ### 🌎 Community Servers
 
 A growing set of community-developed and maintained servers demonstrates various applications of MCP across different domains.
@@ -568,6 +581,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[Adobe Commerce](https://github.com/rafaelstz/adobe-commerce-dev-mcp)** — MCP to interact with Adobe Commerce GraphQL API, including orders, products, customers, etc.
 - **[ADR Analysis](https://github.com/tosin2013/mcp-adr-analysis-server)** - AI-powered Architectural Decision Records (ADR) analysis server that provides architectural insights, technology stack detection, security checks, and TDD workflow enhancement for software development projects.
 - **[Ads MCP](https://github.com/amekala/ads-mcp)** - Remote MCP server for cross-platform ad campaign creation (Google Ads Search & PMax, TikTok). OAuth 2.1 authentication with progress streaming support for long-running operations. [Website](https://www.adspirer.com/)
+- **[Agent Interviews](https://github.com/thinkchainai/agentinterviews_mcp)** - Conduct AI-powered qualitative research interviews and surveys at scale with [Agent Interviews](https://agentinterviews.com).
 - **[AgentBay](https://github.com/Michael98671/agentbay)** - An MCP server for providing serverless cloud infrastructure for AI agents.
 - **[Agentic Framework](https://github.com/Piotr1215/mcp-agentic-framework)** - Multi-agent collaboration framework enabling AI agents to register, discover each other, exchange asynchronous messages via HTTP transport, and work together on complex tasks with persistent message history.
 - **[AgentMode](https://www.agentmode.app)** - Connect to dozens of databases, data warehouses, Github & more, from a single MCP server.  Run the Docker image locally, in the cloud, or on-premise.
@@ -602,6 +616,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[Arduino](https://github.com/vishalmysore/choturobo)** - MCP Server that enables AI-powered robotics using Claude AI and Arduino (ESP32) for real-world automation and interaction with robots.
 - **[arXiv API](https://github.com/prashalruchiranga/arxiv-mcp-server)** - An MCP server that enables interacting with the arXiv API using natural language.
 - **[arxiv-latex-mcp](https://github.com/takashiishida/arxiv-latex-mcp)** - MCP server that fetches and processes arXiv LaTeX sources for precise interpretation of mathematical expressions in papers.
+- **[Arr Suite](https://github.com/shaktech786/arr-suite-mcp-server)** - Intelligent MCP server for Plex and the complete *arr media automation suite (Sonarr, Radarr, Prowlarr, Bazarr, Overseerr) with natural language processing for unified media management.
 - **[Atlassian](https://github.com/sooperset/mcp-atlassian)** - Interact with Atlassian Cloud products (Confluence and Jira) including searching/reading Confluence spaces/pages, accessing Jira issues, and project metadata.
 - **[Atlassian Server (by phuc-nt)](https://github.com/phuc-nt/mcp-atlassian-server)** - An MCP server that connects AI agents (Cline, Claude Desktop, Cursor, etc.) to Atlassian Jira & Confluence, enabling data queries and actions through the Model Context Protocol.
 - **[Attestable MCP](https://github.com/co-browser/attestable-mcp-server)** - An MCP server running inside a trusted execution environment (TEE) via Gramine, showcasing remote attestation using [RA-TLS](https://gramine.readthedocs.io/en/stable/attestation.html). This allows an MCP client to verify the server before connecting.
@@ -854,6 +869,7 @@ A growing set of community-developed and maintained servers demonstrates various
 - **[Goodnews](https://github.com/VectorInstitute/mcp-goodnews)** - A simple MCP server that delivers curated positive and uplifting news stories.
 - **[Google Ads](https://github.com/gomarble-ai/google-ads-mcp-server)** - MCP server acting as an interface to the Google Ads, enabling programmatic access to Facebook Ads data and management features.
 - **[Google Analytics](https://github.com/surendranb/google-analytics-mcp)** - Google Analytics MCP Server to bring data across 200+ dimensions & metrics for LLMs to analyse.
+- **[Google Analytics 4](https://github.com/gomakers-ai/mcp-google-analytics)** - MCP server for Google Analytics Data API and Measurement Protocol to read reports and send events.
 - **[Google Calendar](https://github.com/v-3/google-calendar)** - Integration with Google Calendar to check schedules, find time, and add/delete events
 - **[Google Calendar](https://github.com/nspady/google-calendar-mcp)** - Google Calendar MCP Server for managing Google calendar events. Also supports searching for events by attributes like title and location.
 - **[Google Custom Search](https://github.com/adenot/mcp-google-search)** - Provides Google Search results via the Google Custom Search API
@@ -1006,6 +1022,7 @@ search, and comprehensive file analysis.
 - **[Matrix](https://github.com/mjknowles/matrix-mcp-server)** - Interact with a Matrix homeserver.
 - **[Maven Tools MCP](https://github.com/arvindand/maven-tools-mcp)** - Maven Central dependency intelligence for JVM build tools. Supports all build tools (Maven, Gradle, SBT, Mill) with Context7 integration for documentation support.
 - **[Maybe Don't AI Policy Engine](https://www.maybedont.ai/download/)** - Yet another MCP security gateway, Maybe Don't AI provides policy checks on any call before it reaches downstream MCP servers to protect users from agents behaving poorly.
+- **[MCP Bundles Hub](https://github.com/thinkchainai/mcpbundles)** - Discover, install, and manage 500+ MCP provider integrations and bundles through [MCP Bundles](https://mcpbundles.com).
 - **[MCP Compass](https://github.com/liuyoshio/mcp-compass)** - Suggest the right MCP server for your needs
 - **[MCP Context Provider](https://github.com/doobidoo/MCP-Context-Provider)** - Static server that provides AI models with persistent tool-specific context and rules, preventing context loss between chat sessions and enabling consistent behavior across interactions.
 - **[MCP Create](https://github.com/tesla0225/mcp-create)** - A dynamic MCP server management service that creates, runs, and manages Model Context Protocol servers on-the-fly.
@@ -1182,6 +1199,7 @@ search, and comprehensive file analysis.
 - **[Peacock for VS Code](https://github.com/johnpapa/peacock-mcp)** - MCP Server for the Peacock extension for VS Code, coloring your world, one Code editor at a time. The main goal of the project is to show how an MCP server can be used to interact with APIs.
 - **[persistproc](https://github.com/irskep/persistproc)** - MCP server + command line tool that allows agents to see & control long-running processes like web servers.
 - **[Pexels](https://github.com/garylab/pexels-mcp-server)** - A MCP server providing access to Pexels Free Image API, enabling seamless search, retrieval, and download of high-quality royalty-free images.
+- **[pgtuner_mcp](https://github.com/isdaniel/pgtuner_mcp)** - provides AI-powered PostgreSQL performance tuning capabilities.
 - **[Pharos](https://github.com/QuentinCody/pharos-mcp-server)** - Unofficial MCP server for the Pharos database by the National Center for Advancing Translational Sciences (NCATS), providing access to target, drug, and disease information for drug discovery research.
 - **[Phone MCP](https://github.com/hao-cyber/phone-mcp)** - 📱 A powerful plugin that lets you control your Android phone. Enables AI agents to perform complex tasks like automatically playing music based on weather or making calls and sending texts.
 - **[PIF](https://github.com/hungryrobot1/MCP-PIF)** - A Personal Intelligence Framework (PIF), providing tools for file operations, structured reasoning, and journal-based documentation to support continuity and evolving human-AI collaboration across sessions.
@@ -1236,6 +1254,7 @@ search, and comprehensive file analysis.
 - **[Rememberizer AI](https://github.com/skydeckai/mcp-server-rememberizer)** - An MCP server designed for interacting with the Rememberizer data source, facilitating enhanced knowledge retrieval.
 - **[Replicate](https://github.com/deepfates/mcp-replicate)** - Search, run and manage machine learning models on Replicate through a simple tool-based interface. Browse models, create predictions, track their status, and handle generated images.
 - **[Resend](https://github.com/Klavis-AI/klavis/tree/main/mcp_servers/resend)** - Send email using Resend services
+- **[Restream](https://github.com/shaktech786/restream-mcp-server)** - Model Context Protocol server for Restream API integration - manage multi-platform live streams, control channels, and access streaming analytics.
 - **[Revit MCP](https://github.com/revit-mcp)** - A service implementing the MCP protocol for Autodesk Revit.
 - **[Rijksmuseum](https://github.com/r-huijts/rijksmuseum-mcp)** - Interface with the Rijksmuseum API to search artworks, retrieve artwork details, access image tiles, and explore user collections.
 - **[Riot Games](https://github.com/jifrozen0110/mcp-riot)** - MCP server for League of Legends – fetch player info, ranks, champion stats, and match history via Riot API.
@@ -1398,6 +1417,7 @@ search, and comprehensive file analysis.
 - **[Webex](https://github.com/Kashyap-AI-ML-Solutions/webex-messaging-mcp-server)** - A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to Cisco Webex messaging capabilities.
 - **[Webflow](https://github.com/kapilduraphe/webflow-mcp-server)** - Interact with the Webflow APIs
 - **[webhook-mcp](https://github.com/noobnooc/webhook-mcp)** (by Nooc) - A Model Context Protocol (MCP) server that sends webhook notifications when called.
+- **[Wekan](https://github.com/namar0x0309/wekan-mcp)** - Unofficial MCP server for Wekan, providing all rest api functionality to add, edit, delete tasks and boards.
 - **[whale-tracker-mcp](https://github.com/kukapay/whale-tracker-mcp)**  -  A mcp server for tracking cryptocurrency whale transactions.
 - **[WhatsApp MCP Server](https://github.com/lharries/whatsapp-mcp)** - MCP server for your personal WhatsApp handling individuals, groups, searching and sending.
 - **[Whois MCP](https://github.com/bharathvaj-ganesan/whois-mcp)** - MCP server that performs whois lookup against domain, IP, ASN and TLD.
@@ -1480,7 +1500,7 @@ These are high-level frameworks that make it easier to build MCP servers or clie
 * **[MCP CLI Client](https://github.com/vincent-pli/mcp-cli-host)** - A CLI host application that enables Large Language Models (LLMs) to interact with external tools through the Model Context Protocol (MCP).
 * **[OpenMCP Client](https://github.com/LSTM-Kirigaya/openmcp-client/)** - An all-in-one vscode/trae/cursor plugin for MCP server debugging. [Document](https://kirigaya.cn/openmcp/) & [OpenMCP SDK](https://kirigaya.cn/openmcp/sdk-tutorial/).
 * **[PHP MCP Client](https://github.com/php-mcp/client)** - Core PHP implementation for the Model Context Protocol (MCP) Client
-
+* **[Runbear](https://runbear.io/solutions/integrations/slack/mcp)** - No-code MCP client for team chat platforms, such as Slack, Microsoft Teams, and Discord.
 
 ## 📚 Resources
 
