@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # Knowledge Graph Memory Server
 
 A basic implementation of persistent memory using a local knowledge graph. This lets Claude remember information about the user across chats.

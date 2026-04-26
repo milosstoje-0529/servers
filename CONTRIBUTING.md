@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # Contributing to MCP Servers
 
 Thanks for your interest in contributing! Here's how you can help make this repo better.

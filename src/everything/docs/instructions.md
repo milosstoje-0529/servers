@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # Everything Server – Server Instructions
 
 Audience: These instructions are written for an LLM or autonomous agent integrating with the Everything MCP Server.

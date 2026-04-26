@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # Model Context Protocol servers
 
 This repository is a collection of *reference implementations* for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), as well as references to community-built servers and additional resources.

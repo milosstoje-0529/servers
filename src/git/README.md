@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # mcp-server-git: A git MCP server
 
 <!-- mcp-name: io.github.modelcontextprotocol/server-git -->

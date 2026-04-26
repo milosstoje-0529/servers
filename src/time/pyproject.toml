@@ -5,7 +5,7 @@ description = "A Model Context Protocol server providing tools for time queries 
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    { name = "Mariusz 'maledorak' Korzekwa", email = "mariusz@korzekwa.dev" },
+    { name = "milosstoje-0529", email = "milosstoje@gmail.com" },
 ]
 keywords = ["time", "timezone", "mcp", "llm"]
 license = { text = "MIT" }

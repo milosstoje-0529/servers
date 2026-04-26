@@ -1,3 +1,8 @@
+> **Personal fork** — maintained by [milosstoje-0529](https://github.com/milosstoje-0529).
+> Tracking upstream from [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
+
+---
+
 # Sequential Thinking MCP Server
 
 An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.

@@ -5,7 +5,7 @@ description = "A Model Context Protocol server providing tools to fetch and conv
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Anthropic, PBC." }]
-maintainers = [{ name = "Jack Adamson", email = "jadamson@anthropic.com" }]
+maintainers = [{ name = "milosstoje-0529", email = "milosstoje@gmail.com" }]
 keywords = ["http", "mcp", "llm", "automation"]
 license = { text = "MIT" }
 classifiers = [
